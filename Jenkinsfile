@@ -5,7 +5,7 @@ pipeline {
         stage('Configuration') {
             steps {
                 script {
-                    sh '#!/bin/bash'
+                    sh 'cd'
                     sh 'sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo'
                     sh 'sudo yum -y install terraform'
                     sh 'curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.9/aws-iam-authenticator_0.5.9_linux_amd64'
