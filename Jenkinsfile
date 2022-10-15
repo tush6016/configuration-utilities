@@ -6,9 +6,6 @@ pipeline {
             steps {
                 script {
                     sh 'cd /home/ec2-user'
-                    sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
-                    sh 'unzip awscliv2.zip'
-                    sh 'sudo ./aws/install'
                     sh 'sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo'
                     sh 'sudo yum -y install terraform'
                     sh 'curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.9/aws-iam-authenticator_0.5.9_linux_amd64'
