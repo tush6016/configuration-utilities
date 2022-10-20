@@ -20,7 +20,6 @@ pipeline {
                     sh 'sudo yum install docker -y'
                     sh 'sudo systemctl restart docker'
                     sh 'sudo chmod 777 /var/run/docker.sock'
-                    sh 'sudo yum install git -y'
                 }
             }
         }
