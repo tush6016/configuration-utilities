@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'eks-master'}
+    agent any
 
     stages {
         stage('Configuration') {
